@@ -1,46 +1,36 @@
 const experiences = [
     {
-        period: "2023 - Present",
-        role: "Software Engineer",
-        company: "Tech Company",
-        description: "Working on developing scalable web applications and improving user experience.",
-        technologies: ["React", "Node.js", "AWS"],
+        period: "Feb 2025 – Jun 2025",
+        role: "Développeur Backend",
+        company: "IHUBBS Business Solutions",
+        description: "Développement backend de systèmes informatiques pour des écoles en utilisant Node.js et Express.",
+        technologies: ["Node.js", "Express", "MongoDB", "SQL"],
+        current: false,
+    },
+    {
+        period: "Sept 2024 – Déc 2024",
+        role: "Développeur Logiciel",
+        company: "Nesco inversiones",
+        description: "Administration de bases de données SQL et NoSQL, développement et déploiement d'un site web d'entreprise avec React.js, et gestion des demandes de contact via Django.",
+        technologies: ["React", "Django", "PostgreSQL", "MongoDB"],
+        current: false,
+    },
+    {
+        period: "Sept 2025 – Présent",
+        role: "Étudiant en Master",
+        company: "IMT Nord Europe",
+        description: "Master Systèmes Intelligents Sécurisés et Communicants (double diplôme avec l'Universidad Nacional de Colombia).",
+        technologies: ["Python", "C++", "SCRUM"],
         current: true,
     },
     {
-        period: "2021 - 2023",
-        role: "Frontend Developer",
-        company: "Creative Agency",
-        description: "Focused on building responsive and interactive user interfaces for various clients.",
-        technologies: ["Vue.js", "Tailwind CSS", "Figma"],
-        current: false,
-
-    },
-    {
-        period: "2019 - 2021",
-        role: "Junior Developer",
-        company: "Startup Inc.",
-        description: "Assisted in the development of the company's main product and contributed to various projects.",
-        technologies: ["Angular", "Bootstrap", "Git"],
-        current: false,
-    },
-    {
-        period: "2018 - 2019",
-        role: "Intern",
-        company: "Software Solutions",
-        description: "Gained hands-on experience in software development and collaborated with the team on multiple projects.",
-        technologies: ["Python", "Django", "SQL"],
-        current: false,
-    },
-    {
-        period: "2017 - 2018",
-        role: "Research Assistant",
-        company: "University Lab",
-        description: "Conducted research on machine learning algorithms and published findings in academic journals.",
-        technologies: ["Python", "TensorFlow", "Pandas"],
+        period: "Jan 2021 – Présent",
+        role: "Étudiant en Ingénierie des systèmes et informatique",
+        company: "Universidad Nacional de Colombia",
+        description: "Cours en ingénierie des systèmes et informatique avec projets en programmation et bases de données.",
+        technologies: ["Java", "C++", "Matlab"],
         current: false,
     }
-
 ]
 
 
@@ -62,15 +52,15 @@ export const Experience = () => {
                 className="text-secondary-foreground text-sm 
                 font-medium tracking-wider uppercase animate-fade-in"
                 >
-                    Carrer Journey
+                    Parcours professionnel
                 </span>
                 <h2
                   className="text-4xl md:text-5xl font-bold 
                   mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground"
                 >
-                    Experience that {"  "} 
+                    Une expérience qui {"  "} 
                     <span className="font-serif italic font-normal text-white"> 
-                        speaks volumes.
+                        en dit long.
                         </span> 
                 </h2>
 
@@ -78,7 +68,7 @@ export const Experience = () => {
                     className="text-muted-foreground 
                     animate-fade-in animation-delay-200"
                 >
-                    A timeline of my professional growth, showcasing the roles, responsibilities, and technologies that have shaped my career in software development.
+                    Une chronologie de mon évolution professionnelle, présentant les postes, responsabilités et technologies qui ont façonné ma carrière en développement logiciel.
                 </p>
 
             </div>

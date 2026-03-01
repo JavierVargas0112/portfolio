@@ -3,32 +3,28 @@ import {AnimatedBorderButton} from "@/components/AnimatedBorderButton";
 
 const projects = [
     {
-        title: "Project 1",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies lacinia, nunc nisl aliquam nisl, eget aliquam nunc nisl eget nunc.",
+        title: "Backend pour systèmes scolaires",
+        description: "Conception et implémentation d'un backend Node.js/Express pour gérer les données d'élèves et l'administration d'écoles, déployé en environnement cloud avec MongoDB.",
         image: "https://via.placeholder.com/400x300",
-        tags: ["React", "Tailwind", "API"],
-        link: "#"
+        tags: ["Node.js", "Express", "MongoDB"],
+        link: "#",
+        github: "https://github.com/JavierVargas0112/ihubbs-backend"
     },
     {
-        title: "Project 2",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies lacinia, nunc nisl aliquam nisl, eget aliquam nunc nisl eget nunc.",
+        title: "Site web d'entreprise & gestion des contacts",
+        description: "Développement d'un site React.js pour une entreprise, avec backend Django permettant de stocker et traiter les demandes de contact dans des bases SQL/NoSQL.",
         image: "https://via.placeholder.com/400x300",
-        tags: ["React", "Tailwind", "API"],
-        link: "#"
+        tags: ["React", "Django", "PostgreSQL"],
+        link: "#",
+        github: "https://github.com/JavierVargas0112/nesco-website"
     },
     {
-        title: "Project 3",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies lacinia, nunc nisl aliquam nisl, eget aliquam nunc nisl eget nunc.",
+        title: "Portfolio personnel",
+        description: "Ce site web réactif a été créé pour présenter mon parcours, mes compétences et mes projets professionnels.",
         image: "https://via.placeholder.com/400x300",
-        tags: ["React", "Tailwind", "API"],
-        link: "#"
-    },
-    {
-        title: "Project 4",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies lacinia, nunc nisl aliquam nisl, eget aliquam nunc nisl eget nunc.",
-        image: "https://via.placeholder.com/400x300",
-        tags: ["React", "Tailwind", "API"],
-        link: "#"
+        tags: ["React", "Vite", "Tailwind CSS"],
+        link: "#",
+        github: "https://github.com/JavierVargas0112/portfolio"
     }
 ]
 
@@ -43,14 +39,16 @@ export const Projects = () => {
          <div className="container mx-auto px-6 relative z-10">
             {/* Section Header */}
             <div className="text-center mx-auto max-w-3xl mb-16">
-                <span className="text-secondary-foreground text-sm font-medium uppercase animate-fade-in">Featured Work</span>
+                <span className="text-secondary-foreground text-sm font-medium uppercase animate-fade-in">Projets</span>
                 <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground"> 
-                    Projects that 
-                    <span className="font-serif italic font-normal text-white"> {" "} make an impact. </span>
+                    Projets qui
+                    <span className="font-serif italic font-normal text-white"> {" "} font la différence. </span>
                 </h2>
             </div>
             <p className="text-muted-foreground animate-fade-im animation-delay-200">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. A quaerat est fugit minus iusto odio vitae! Ducimus enim animi voluptatem voluptatibus totam natus minima iure, laborum itaque quae facilis numquam!
+                Voici quelques-uns des projets sur lesquels j'ai travaillé, allant du backend pour des systèmes scolaires
+                à des sites web d'entreprise et mon portfolio personnel. Chaque réalisation reflète mon intérêt pour des
+                solutions robustes et maintenables.
             </p>
 
             {/* Projects Grid */}
@@ -122,7 +120,7 @@ export const Projects = () => {
 
             <div className="text-center mt-12 animate-fade-in animation-delay-500">
                 <AnimatedBorderButton>
-                    View All projects
+                    Voir tous les projets
                     <ArrowUpRight className="w-5 h-5" />
                 </AnimatedBorderButton>
             </div>

@@ -3,11 +3,12 @@ import { Menu , X} from "lucide-react"
 import { useEffect, useState } from "react"
 
 const navLinks = [
-    {href: "#about", label: "About"},
-    {href: "#projects", label: "Projects"},
-    {href: "#experience", label: "Experience"},
-    {href: "#testimonials", label: "Testimonials"}
+    {href: "#about", label: "À propos"},
+    {href: "#projects", label: "Projets"},
+    {href: "#experience", label: "Expérience"},
+    {href: "#contact", label: "Contact"},
 ]
+
 export const NavBar = () =>{
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     const [isScrolled, setIsScrolled] = useState(false)
@@ -26,7 +27,7 @@ export const NavBar = () =>{
     <header className={`fixed top-0 left-0 right-0 transition-all duration-500 ${isScrolled ? "glass-strong py-3": "bg-transparent py-5"}  z-50`}>
         <nav className="container mx-auto px-6 flex items center justify-between">
             <a href="#" className="text-xl font-bold tracking-tight hover:text-primary">
-                JV<span className="text-primary">.</span>
+                Javier V.<span className="text-primary">.</span>
             </a>
 
             {/* Desktop Nav */}
@@ -42,7 +43,7 @@ export const NavBar = () =>{
 
             {/* CTA Button */}
             <div className="hidden md:block">
-                <Button size="sm">Contact Me</Button>
+                <Button size="sm">Contactez-moi</Button>
             </div>
         
 
@@ -72,7 +73,7 @@ export const NavBar = () =>{
                     ))}
 
                     <Button onClick={() => setIsMobileMenuOpen(false)}>
-                        Contact Me
+                        Contactez-moi
                     </Button>
                 </div>
                 

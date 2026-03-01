@@ -3,23 +3,23 @@ import { Code2 } from "lucide-react";
 const highlights = [
     {
         icon: Code2,
-        title: "Clean Code",
-        description: "SALSLALLALSLALSL"
+        title: "Backend Development",
+        description: "Expérience approfondie en Node.js, Express et bases de données relationnelles et NoSQL."
     },
     {
         icon: Code2,
-        title: "Clean Code",
-        description: "SALSLALLALSLALSL"
+        title: "Data Analysis",
+        description: "Formation en science des données et utilisation de Python/Matlab pour manipuler et analyser des ensembles de données."
     },
     {
         icon: Code2,
-        title: "Clean Code",
-        description: "SALSLALLALSLALSL"
+        title: "Cloud & DevOps",
+        description: "Compétences en AWS, Azure et Docker pour déployer des applications sécurisées et scalables."
     },
     {
         icon: Code2,
-        title: "Clean Code",
-        description: "SALSLALLALSLALSL"
+        title: "Collaboration & SCRUM",
+        description: "Travail en équipe, leadership et méthodologies agiles pour mener à bien les projets."
     }
 ]
 
@@ -34,31 +34,48 @@ export const About = () => {
                         <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">About Me</span>
                     </div>
 
-                    <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">Building the future, 
+                    <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">Construire l'avenir,
                     <span className="font-serif italic font-normal text-white"> 
                         {" "}
-                         one component at a time,
+                         une ligne de code à la fois,
                     </span>
                     </h2>
                     <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
                         <p>
-                            dasjda  diajsdjasdo as dasdjasdñj alkjadfuonf sdodfn sdf dslfn sdanofnodsf adfldsnf sdfñdsfkm asdnf dasjda  diajsdjasdo as dasdjasdñj alkjadfuonf sdodfn sdf dslfn sdanofnodsf adfldsnf sdfñdsfkm asdnf
+                            Étudiant ingénieur en M1 Systèmes Intelligents Sécurisés et Communicants à IMT Nord Europe, passionné par le
+                            développement backend et l’analyse de données. Mes expériences m'ont amené à concevoir des systèmes pour
+                            le secteur éducatif et des plateformes web d'entreprise.
                         </p>
                         <p>
-                            dasjda  diajsdjasdo as dasdjasdñj alkjadfuonf sdodfn sdf dslfn sdanofnodsf adfldsnf sdfñdsfkm asdnf dasjda  diajsdjasdo as dasdjasdñj alkjadfuonf sdodfn sdf dslfn sdanofnodsf adfldsnf sdfñdsfkm asdnf
+                            J'ai acquis une solide maîtrise de Node.js, Express, React, Python, Django, ainsi que des bases de données
+                            relationnelles et NoSQL. Curieux et rigoureux, j'aime résoudre des problèmes complexes et automatiser des
+                            processus pour gagner en efficacité.
                         </p>
                         <p>
-                            dasjda  diajsdjasdo as dasdjasdñj alkjadfuonf sdodfn sdf dslfn sdanofnodsf adfldsnf sdfñdsfkm asdnf
+                            Proactif et axé sur la collaboration, je travaille bien en équipe agile, en utilisant SCRUM et des pratiques
+                            modernes de développement. Mon sens du leadership et ma gestion du temps contribuent à la réussite des projets.
                         </p>
                         <p>
-                            dasjda  diajsdjasdo as dasdjasdñj alkjadfuonf sdodfn sdf dslfn sdanofnodsf adfldsnf sdfñdsfkm asdnf
+                            Je suis actuellement à la recherche d'un stage à partir d'avril 2026 afin de mettre mes compétences au service de
+                            projets ambitieux et continuer à apprendre de nouvelles technologies.
                         </p>
                     </div>
 
-                    <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
-                        <p className="text-lg font-medium italic text-foreground">
-                            My mission is lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies lacinia, nunc nisl aliquam nisl, eget aliquam nunc nisl eget nunc. Donec auctor, nisl eget ultricies lacinia, nunc nisl aliquam nisl, eget aliquam nunc nisl eget nunc.
-                        </p>
+                    <div className="space-y-4 animate-fade-in animation-delay-300">
+                        <div>
+                            <h3 className="text-lg font-semibold">Langues</h3>
+                            <ul className="list-disc list-inside text-sm text-muted-foreground">
+                                <li>Espagnol – courant</li>
+                                <li>Anglais – professionnel</li>
+                                <li>Français – intermédiaire avancé</li>
+                            </ul>
+                        </div>
+                        <div className="glass rounded-2xl p-6 glow-border">
+                            <p className="text-lg font-medium italic text-foreground">
+                                Ma mission est de développer des systèmes sécurisés et performants, tout en continuant à apprendre
+                                et à évoluer dans le domaine du backend et de l'analyse de données.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
