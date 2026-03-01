@@ -1,25 +1,29 @@
 import { Button } from "@/components/Button"
 import { Menu , X} from "lucide-react"
 import { useEffect, useState } from "react"
+import { useLanguage } from "@/contexts/LanguageContext"
+import { translations } from "@/translations"
 
-const navLinks = [
-    {href: "#about", label: "À propos"},
-    {href: "#projects", label: "Projets"},
-    {href: "#experience", label: "Expérience"},
-    {href: "#contact", label: "Contact"},
-]
+// navLinks will be generated inside the component using current language
 
 export const NavBar = () =>{
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     const [isScrolled, setIsScrolled] = useState(false)
+    const { lang, toggleLanguage } = useLanguage()
+
+    // derive navLinks based on language
+    const navLinks = [
+      { href: "#about", label: translations.nav.links.about[lang] },
+      { href: "#projects", label: translations.nav.links.projects[lang] },
+      { href: "#experience", label: translations.nav.links.experience[lang] },
+      { href: "#contact", label: translations.nav.links.contact[lang] },
+    ]
 
     useEffect(() => {
-
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50)
         }
         window.addEventListener("scroll", handleScroll )
-
         return () => window.removeEventListener("scroll", handleScroll)
     }, [])
 
@@ -31,7 +35,7 @@ export const NavBar = () =>{
             </a>
 
             {/* Desktop Nav */}
-            <div className="hidden md:flex flex items-center gap-1">
+            <div className="hidden md:flex flex items-center gap-3">
                 <div className="glass rounded-full px-2 py-1 flex items-center gap-1">
                     {navLinks.map((link, index) => (
                         <a href={link.href} key={index} className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full  hover:bg-surface">
@@ -39,14 +43,19 @@ export const NavBar = () =>{
                         </a>
                     ))}
                 </div>
+                <button
+                  onClick={toggleLanguage}
+                  className="px-3 py-1 border rounded-full text-sm"
+                >
+                  {lang === "fr" ? "EN" : "FR"}
+                </button>
             </div>
 
             {/* CTA Button */}
             <div className="hidden md:block">
-                <Button size="sm">Contactez-moi</Button>
+                <Button size="sm">{translations.nav.contactButton[lang]}</Button>
             </div>
         
-
             {/* mobile menu button */}
             <button className="md:hidden p-2 text-foreground cursor-pointer" 
             onClick={() => setIsMobileMenuOpen((prev) => !prev)}>
@@ -73,8 +82,17 @@ export const NavBar = () =>{
                     ))}
 
                     <Button onClick={() => setIsMobileMenuOpen(false)}>
-                        Contactez-moi
+                        {translations.nav.contactButton[lang]}
                     </Button>
+                    <button
+                      onClick={() => {
+                        toggleLanguage();
+                        setIsMobileMenuOpen(false);
+                      }}
+                      className="px-3 py-1 border rounded-full text-sm"
+                    >
+                      {lang === "fr" ? "EN" : "FR"}
+                    </button>
                 </div>
                 
             </div>

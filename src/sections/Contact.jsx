@@ -1,42 +1,52 @@
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Github, Linkedin } from "lucide-react"
 import { Button } from "@/components/Button";
-import { use, useState } from "react";
+import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/translations";
 
-const contactInfo = [
-    {
+// contact info will be created inside the component so it can access current language
+
+export const Contact = () => {
+    const { lang } = useLanguage();
+    const t = translations.contact;
+    // ensure labels are safe even if HMR hasn't reloaded translations
+    const emailLabel = t.labels?.email?.[lang] ?? "Email";
+    const phoneLabel = t.labels?.phone?.[lang] ?? (lang === "fr" ? "Téléphone" : "Phone");
+    const locationLabel = t.labels?.location?.[lang] ?? (lang === "fr" ? "Localisation" : "Location");
+
+    const contactInfo = [
+      {
         icon: Mail,
-        label: "Email",
+        label: emailLabel,
         value: "javier.vargas@etu.imt-nord-europe.fr",
         href: "mailto:javier.vargas@etu.imt-nord-europe.fr",
-    },
-    {
+      },
+      {
         icon: Phone,
-        label: "Téléphone",
+        label: phoneLabel,
         value: "+33 7 59 50 39 40",
         href: "tel:+33759503940",
-    },
-    {
+      },
+      {
         icon: MapPin,
-        label: "Localisation",
+        label: locationLabel,
         value: "Lille, France",
         href: "https://www.google.com/maps/place/Lille,+France",
-    },
-    {
+      },
+      {
         icon: Github,
         label: "GitHub",
         value: "javiervargas0112",
         href: "https://github.com/JavierVargas0112",
-    },
-    {
+      },
+      {
         icon: Linkedin,
         label: "LinkedIn",
         value: "javier-santiago-vargas-parra",
         href: "https://linkedin.com/in/javier-santiago-vargas-parra",
-    },
-]
-
-export const Contact = () => {
+      },
+    ];
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -69,10 +79,10 @@ export const Contact = () => {
                 message: formData.message,            }, 
                 publicKey);
 
-            setSubmitStatus({type: "success", message: "Message sent successfully!"});
+            setSubmitStatus({type: "success", message: t.form.statusSuccess[lang]});
         } catch (error) {
             console.error("Error sending message:", error);
-            setSubmitStatus({type: "error", message: error.text || "Failed to send message. Please try again later."});
+            setSubmitStatus({type: "error", message: error.text || t.form.statusError[lang]});
 
         } finally {
             setIsLoading(false);
@@ -91,17 +101,13 @@ export const Contact = () => {
         {/* Section Header */}
             <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
-                Contactez-moi
+                {t.heading[lang]}
             </span>
             <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
-                Construisons
-                <span className="font-serif italic font-normal text-white">
-                quelque chose de génial.
-                </span>
+                {t.subtitle[lang]}
             </h2>
             <p className="text-muted-foreground animate-fade-in animation-delay-200">
-                Vous avez un projet en tête ? J'aimerais en savoir plus. Envoyez-moi un message
-                et discutons de la manière dont nous pouvons collaborer.
+                {t.description[lang]}
             </p>
             </div>
 
@@ -113,14 +119,14 @@ export const Contact = () => {
                                 htmlFor="name"
                                 className="block text-sm font-medium mb mb-2"
                             > 
-                                Nom
+                                {t.form.name[lang]}
                             </label>
                             <input
                              id="name"
                              type="text"  
                              className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
                              required
-                             placeholder="Votre nom..."
+                             placeholder={t.form.placeholders[lang].name}
                              value={formData.name}
                                 onChange={(e) => setFormData({...formData, name: e.target.value})}
                             />
@@ -129,24 +135,24 @@ export const Contact = () => {
                             <label 
                             htmlFor="email"
                             className="block text-sm font-medium mb mb-2"
-                            > Email</label>
+                            > {t.form.email[lang]}</label>
                             <input 
                              id="email" 
                              type="email" 
                              className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" 
                              required
-                             placeholder="votre@email.com"
+                             placeholder={t.form.placeholders[lang].email}
                                 value={formData.email}
                                 onChange={(e) => setFormData({...formData, email: e.target.value})}
                             />
                         </div>
                         <div>
-                            <label htmlFor="message" className="block text-sm font-medium mb mb-2"> Message</label>
+                            <label htmlFor="message" className="block text-sm font-medium mb mb-2"> {t.form.message[lang]}</label>
                             <textarea 
                             rows={5}
                             id="message" 
                             className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none" 
-                            placeholder="Votre message..."
+                            placeholder={t.form.placeholders[lang].message}
                             value={formData.message}
                                 onChange={(e) => setFormData({...formData, message: e.target.value})}
                             />
@@ -160,10 +166,10 @@ export const Contact = () => {
 
                         >
                             {isLoading ? (
-                            <>Envoi...</>
+                            <>{t.form.sending[lang]}</>
                             ) : (
                             <>
-                                Envoyer le message
+                                {t.form.submit[lang]}
                                 <Send className="w-5 h-5" />
                             </>
                             )}
@@ -192,7 +198,7 @@ export const Contact = () => {
           <div className="space-y-6 animate-fade-in animation-delay-400">
             <div className="glass rounded-3xl p-8">
               <h3 className="text-xl font-semibold mb-6">
-                Informations de contact
+                {t.contactInfoTitle[lang]}
               </h3>
               <div className="space-y-4">
                 {contactInfo.map((item, i) => (
@@ -219,12 +225,10 @@ export const Contact = () => {
             <div className="glass rounded-3xl p-8 border border-primary/30">
               <div className="flex items-center gap-3 mb-4">
                 <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                <span className="font-medium">Disponible actuellement</span>
+                <span className="font-medium">{t.availability.title[lang]}</span>
               </div>
               <p className="text-muted-foreground text-sm">
-                Je suis actuellement ouvert à de nouvelles opportunités et projets passionnants.
-                Que vous ayez besoin d'un ingénieur en temps plein ou d'un consultant freelance,
-                parlons-en !
+                {t.availability.text[lang]}
               </p>
             </div>
           </div>

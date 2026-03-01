@@ -1,40 +1,62 @@
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/translations";
+
 const experiences = [
     {
         period: "Feb 2025 – Jun 2025",
-        role: "Développeur Backend",
+        role: { fr: "Développeur Backend", en: "Backend Developer" },
         company: "IHUBBS Business Solutions",
-        description: "Développement backend de systèmes informatiques pour des écoles en utilisant Node.js et Express.",
+        description: {
+          fr: "Développement backend de systèmes informatiques pour des écoles en utilisant Node.js et Express.",
+          en: "Backend development of school systems using Node.js and Express.",
+        },
         technologies: ["Node.js", "Express", "MongoDB", "SQL"],
         current: false,
     },
     {
         period: "Sept 2024 – Déc 2024",
-        role: "Développeur Logiciel",
+        role: { fr: "Développeur Logiciel", en: "Software Developer" },
         company: "Nesco inversiones",
-        description: "Administration de bases de données SQL et NoSQL, développement et déploiement d'un site web d'entreprise avec React.js, et gestion des demandes de contact via Django.",
+        description: {
+          fr: "Administration de bases de données SQL et NoSQL, développement et déploiement d'un site web d'entreprise avec React.js, et gestion des demandes de contact via Django.",
+          en: "Administered SQL/NoSQL databases, developed and deployed a company website with React.js, and managed contact requests with Django.",
+        },
         technologies: ["React", "Django", "PostgreSQL", "MongoDB"],
         current: false,
     },
     {
         period: "Sept 2025 – Présent",
-        role: "Étudiant en Master",
+        role: { fr: "Étudiant en Master", en: "Master Student" },
         company: "IMT Nord Europe",
-        description: "Master Systèmes Intelligents Sécurisés et Communicants (double diplôme avec l'Universidad Nacional de Colombia).",
+        description: {
+          fr: "Master Systèmes Intelligents Sécurisés et Communicants (double diplôme avec l'Universidad Nacional de Colombia).",
+          en: "Master in Secure and Intelligent Systems (double degree with Universidad Nacional de Colombia).",
+        },
         technologies: ["Python", "C++", "SCRUM"],
         current: true,
     },
     {
         period: "Jan 2021 – Présent",
-        role: "Étudiant en Ingénierie des systèmes et informatique",
+        role: { fr: "Étudiant en Ingénierie des systèmes et informatique", en: "Systems and Computer Engineering Student" },
         company: "Universidad Nacional de Colombia",
-        description: "Cours en ingénierie des systèmes et informatique avec projets en programmation et bases de données.",
+        description: {
+          fr: "Cours en ingénierie des systèmes et informatique avec projets en programmation et bases de données.",
+          en: "Courses in systems and computer engineering with programming and database projects.",
+        },
         technologies: ["Java", "C++", "Matlab"],
         current: false,
     }
-]
+];
 
 
 export const Experience = () => {
+    const { lang } = useLanguage();
+    const t = translations.experience;
+    const displayExperiences = experiences.map((exp) => ({
+      ...exp,
+      role: typeof exp.role === "object" ? exp.role[lang] : exp.role,
+      description: typeof exp.description === "object" ? exp.description[lang] : exp.description,
+    }));
     return (
     <section
         id="experience"
@@ -58,17 +80,14 @@ export const Experience = () => {
                   className="text-4xl md:text-5xl font-bold 
                   mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground"
                 >
-                    Une expérience qui {"  "} 
-                    <span className="font-serif italic font-normal text-white"> 
-                        en dit long.
-                        </span> 
+                    {t.tagline[lang]}
                 </h2>
 
                 <p
                     className="text-muted-foreground 
                     animate-fade-in animation-delay-200"
                 >
-                    Une chronologie de mon évolution professionnelle, présentant les postes, responsabilités et technologies qui ont façonné ma carrière en développement logiciel.
+                    {t.description[lang]}
                 </p>
 
             </div>
@@ -79,7 +98,7 @@ export const Experience = () => {
                 
                 {/* Experience Items */}
                 <div className="space-y-12">
-                    {experiences.map((exp, idx) => (
+                    {displayExperiences.map((exp, idx) => (
                         <div 
                             key={idx} 
                             className="relative grid md:grid-cols-2 gap-8 animate-fade-in"

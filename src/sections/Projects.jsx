@@ -1,34 +1,53 @@
 import { Github, ArrowUpRight } from "lucide-react";
 import {AnimatedBorderButton} from "@/components/AnimatedBorderButton";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/translations";
 
-const projects = [
+// projects data includes both languages for title and description
+const rawProjects = [
     {
-        title: "Backend pour systèmes scolaires",
-        description: "Conception et implémentation d'un backend Node.js/Express pour gérer les données d'élèves et l'administration d'écoles, déployé en environnement cloud avec MongoDB.",
+        title: { fr: "Backend pour systèmes scolaires", en: "Backend for school systems" },
+        description: {
+          fr: "Conception et implémentation d'un backend Node.js/Express pour gérer les données d'élèves et l'administration d'écoles, déployé en environnement cloud avec MongoDB.",
+          en: "Designed and implemented a Node.js/Express backend to manage student data and school administration, deployed to the cloud with MongoDB.",
+        },
         image: "https://via.placeholder.com/400x300",
         tags: ["Node.js", "Express", "MongoDB"],
         link: "#",
         github: "https://github.com/JavierVargas0112/ihubbs-backend"
     },
     {
-        title: "Site web d'entreprise & gestion des contacts",
-        description: "Développement d'un site React.js pour une entreprise, avec backend Django permettant de stocker et traiter les demandes de contact dans des bases SQL/NoSQL.",
+        title: { fr: "Site web d'entreprise & gestion des contacts", en: "Company website & contact management" },
+        description: {
+          fr: "Développement d'un site React.js pour une entreprise, avec backend Django permettant de stocker et traiter les demandes de contact dans des bases SQL/NoSQL.",
+          en: "Developed a React.js website for a company with a Django backend to store and process contact requests using SQL/NoSQL databases.",
+        },
         image: "https://via.placeholder.com/400x300",
         tags: ["React", "Django", "PostgreSQL"],
         link: "#",
         github: "https://github.com/JavierVargas0112/nesco-website"
     },
     {
-        title: "Portfolio personnel",
-        description: "Ce site web réactif a été créé pour présenter mon parcours, mes compétences et mes projets professionnels.",
+        title: { fr: "Portfolio personnel", en: "Personal portfolio" },
+        description: {
+          fr: "Ce site web réactif a été créé pour présenter mon parcours, mes compétences et mes projets professionnels.",
+          en: "This responsive website was built to showcase my background, skills, and professional projects.",
+        },
         image: "https://via.placeholder.com/400x300",
         tags: ["React", "Vite", "Tailwind CSS"],
         link: "#",
         github: "https://github.com/JavierVargas0112/portfolio"
     }
-]
+];
 
 export const Projects = () => {
+    const { lang } = useLanguage();
+    const t = translations.projects;
+    const projects = rawProjects.map(p => ({
+      ...p,
+      title: p.title[lang],
+      description: p.description[lang],
+    }));
     return (
     <section id="projects" className="py-32 relative overflow-hidden">
 
@@ -39,16 +58,13 @@ export const Projects = () => {
          <div className="container mx-auto px-6 relative z-10">
             {/* Section Header */}
             <div className="text-center mx-auto max-w-3xl mb-16">
-                <span className="text-secondary-foreground text-sm font-medium uppercase animate-fade-in">Projets</span>
-                <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground"> 
-                    Projets qui
-                    <span className="font-serif italic font-normal text-white"> {" "} font la différence. </span>
+                <span className="text-secondary-foreground text-sm font-medium uppercase animate-fade-in">{t.featured[lang]}</span>
+                <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
+                    {t.tagline[lang]}
                 </h2>
             </div>
             <p className="text-muted-foreground animate-fade-im animation-delay-200">
-                Voici quelques-uns des projets sur lesquels j'ai travaillé, allant du backend pour des systèmes scolaires
-                à des sites web d'entreprise et mon portfolio personnel. Chaque réalisation reflète mon intérêt pour des
-                solutions robustes et maintenables.
+                {t.intro[lang]}
             </p>
 
             {/* Projects Grid */}
@@ -120,7 +136,7 @@ export const Projects = () => {
 
             <div className="text-center mt-12 animate-fade-in animation-delay-500">
                 <AnimatedBorderButton>
-                    Voir tous les projets
+                    {t.viewAll[lang]}
                     <ArrowUpRight className="w-5 h-5" />
                 </AnimatedBorderButton>
             </div>

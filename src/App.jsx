@@ -7,23 +7,25 @@ import {Testimonials} from "@/sections/Testimonials"
 import {Contact} from "@/sections/Contact"
 
 
+import { LanguageProvider } from "@/contexts/LanguageContext";
+
 function App() {
-  
-
   return (
-  <div className="min-h-screen overflow-x-hidden">
-    <NavBar />
+    <LanguageProvider>
+      <div className="min-h-screen overflow-x-hidden">
+        <NavBar />
 
-    <main>
-      <Hero />
-      <About />
-      <Projects />
-      <Experience />
-      <Testimonials />
-      <Contact />
-    </main>
-  </div>
-  )
+        <main>
+          <Hero />
+          <About />
+          <Projects />
+          <Experience />
+          <Testimonials />
+          <Contact />
+        </main>
+      </div>
+    </LanguageProvider>
+  );
 }
 
 export default App

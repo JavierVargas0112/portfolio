@@ -1,7 +1,8 @@
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton"
 import { Button } from "../components/Button"
 import { ArrowRight, Download, Github, Linkedin, ChevronDown } from "lucide-react"
-
+import { useLanguage } from "@/contexts/LanguageContext"
+import { translations } from "@/translations"
 
 const skills = [
     "React",
@@ -22,20 +23,22 @@ const skills = [
     "Git",
 
 ]
-
 export const Hero = () => {
+    const { lang } = useLanguage();
+    const t = translations.hero;
+
     return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Bg */}
         <div className="absolute inset-0">
-            <img src="/bg1.jpg" alt="Hero image" className="w-full h-full object-cover opacity-40"/>
+            <img src="/bg.jpg" alt="Hero image" className="w-full h-full object-cover opacity-40"/>
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-background"></div>
 
         {/* Green Dots */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {[...Array(30)].map((_,i) => (
-                <div className="absolute w-1.5 h-1.5 rounded-full opacity-60" style={{
+                <div key={i} className="absolute w-1.5 h-1.5 rounded-full opacity-60" style={{
                     backgroundColor: "#20B2A6",
                     left: `${Math.random()* 100}%`,
                     top:  `${Math.random()* 100}%`,
@@ -53,44 +56,36 @@ export const Hero = () => {
                     <div className="animate-fade-in">
                         <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                             <span className="w-2 h-2 bg-primary rounded-full animate-pulse"/>
-                                Développeur Backend & Étudiant M1 SISC
+                                {t.role[lang]}
                         </span>
                     </div>
 
                     {/* HeadLine */}
                     <div className="space-y-4 ">
                         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                            Créer des <span className="text-primary glow-text">expériences</span>
-                            <br/>
-                            numériques avec
-                            <br/>
-                            <span className="font-serif italic font-normal text-white">
-                                précision.
-                            </span>
+                            {t.headline[lang]}
                         </h1>
                         <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                            Étudiant ingénieur en M1 Systèmes Intelligents Sécurisés et Communicants, passionné par le développement backend
-                            et l’analyse de données. Je cherche à appliquer des solutions robustes aux défis techniques en tirant
-                            profit de mes compétences en Node.js, React, Python et bases de données.
+                            {t.summary[lang]}
                         </p>
                     </div>
 
                     {/* CTA */}
                     <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
                         <Button size="lg">
-                            Contactez-moi <ArrowRight className="w-5 h-5"/>
+                            {t.ctaContact[lang]} <ArrowRight className="w-5 h-5"/>
                         </Button>
                         <a href="/CV Javier Santiago Vargas Parra (Fr).pdf" target="_blank" rel="noopener noreferrer">
                             <AnimatedBorderButton>
                                 <Download/>
-                                Télécharger CV
+                                {t.ctaDownload[lang]}
                             </AnimatedBorderButton>
                         </a>
                     </div>
 
                     {/* Social links */}
                     <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
-                        <span className="text-sm text-muted-foreground">Suivez-moi : </span>
+                        <span className="text-sm text-muted-foreground">{t.follow[lang]} </span>
                         {[
                         {icon: Github, href: "#"},
                         {icon: Linkedin, href: "#"},
@@ -122,7 +117,7 @@ export const Hero = () => {
                             <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
                                 <div className="flex items-center gap-3">
                                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"/>
-                                    <span className="text-sm font-medium"> Disponible</span>
+                                    <span className="text-sm font-medium"> {t.available[lang]}</span>
                                 </div>
                             </div>
                             {/* Stats Badge */}
@@ -140,7 +135,7 @@ export const Hero = () => {
             {/* Skills */}
             <div className="mt-20 animate-fade-in animation-delay-600">
                 <p className="text-sm text-muted-foreground mb-6 text-center">
-                    Technologies que j'utilise
+                    {t.skillsHeading[lang]}
                 </p>
                 <div className="relative overflow-hidden ">
                     <div className="flex animate-marquee">
@@ -162,7 +157,7 @@ export const Hero = () => {
           href="#about"
           className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
         >
-          <span className="text-xs uppercase tracking-wider">Scroll</span>
+          <span className="text-xs uppercase tracking-wider">{t.scroll[lang]}</span>
           <ChevronDown className="w-6 h-6 animate-bounce" />
         </a>
       </div>
