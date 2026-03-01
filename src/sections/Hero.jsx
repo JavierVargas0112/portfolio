@@ -75,7 +75,8 @@ export const Hero = () => {
                         <Button size="lg">
                             {t.ctaContact[lang]} <ArrowRight className="w-5 h-5"/>
                         </Button>
-                        <a href="/CV Javier Santiago Vargas Parra (Fr).pdf" target="_blank" rel="noopener noreferrer">
+                        {/* PDF must be placed in public/ as cv.pdf */}
+                        <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
                             <AnimatedBorderButton>
                                 <Download/>
                                 {t.ctaDownload[lang]}
