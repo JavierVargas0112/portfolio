@@ -11,7 +11,7 @@ const rawProjects = [
           fr: "Conception et implémentation d'un backend Node.js/Express pour gérer les données d'élèves et l'administration d'écoles, déployé en environnement cloud avec MongoDB.",
           en: "Designed and implemented a Node.js/Express backend to manage student data and school administration, deployed to the cloud with MongoDB.",
         },
-        image: "https://via.placeholder.com/400x300",
+        image: "Certificate Analiaias.png",
         tags: ["Node.js", "Express", "MongoDB"],
         link: "#",
         github: "https://github.com/JavierVargas0112/ihubbs-backend"
