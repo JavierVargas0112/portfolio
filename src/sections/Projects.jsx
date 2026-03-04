@@ -6,37 +6,37 @@ import { translations } from "@/translations";
 // projects data includes both languages for title and description
 const rawProjects = [
     {
-        title: { fr: "Backend pour systèmes scolaires", en: "Backend for school systems" },
+        title: { fr: "x506 Certificate Analysis", en: "x506 Certificate Analysis" },
         description: {
-          fr: "Conception et implémentation d'un backend Node.js/Express pour gérer les données d'élèves et l'administration d'écoles, déployé en environnement cloud avec MongoDB.",
-          en: "Designed and implemented a Node.js/Express backend to manage student data and school administration, deployed to the cloud with MongoDB.",
+          fr: "L'outil d'analyse des certificats X.509 est une application Python pour analyser et valider les certificats numériques localement ou à distance sur des connexions réseau. Il offre des interfaces GUI et CLI avec un lanceur unifié pour le mode serveur (partage de certificats), le mode client (analyse à distance) et l'analyse locale. Les fonctionnalités clés incluent la validation automatique, l'évaluation de sécurité, la vérification des algorithmes et la journalisation détaillée avec support multi-thread.",
+          en: "The X.509 Certificate Analysis Tool is a Python application for analyzing and validating digital certificates locally or remotely over network connections. It provides GUI and CLI interfaces with a unified launcher for server mode (certificate sharing), client mode (remote analysis), and local analysis. Key features include automatic certificate validation, security assessment, algorithm verification, and detailed logging with multi-threaded support for simultaneous connections.",
         },
-        image: "Certificate Analiaias.png",
-        tags: ["Node.js", "Express", "MongoDB"],
-        link: "#",
-        github: "https://github.com/JavierVargas0112/ihubbs-backend"
+        image: "projects/Certificate-Analisis.png",
+        tags: ["Python", "Tkinter", "OpenSSL", "Multi-threading", "Network Sockets"],
+        link: "https://github.com/JavierVargas0112/x509-certificate-analisis",
+        github: "https://github.com/JavierVargas0112/x509-certificate-analisis" 
     },
     {
-        title: { fr: "Site web d'entreprise & gestion des contacts", en: "Company website & contact management" },
+        title: { fr: "Company Ranker", en: "Company Ranker" },
         description: {
-          fr: "Développement d'un site React.js pour une entreprise, avec backend Django permettant de stocker et traiter les demandes de contact dans des bases SQL/NoSQL.",
-          en: "Developed a React.js website for a company with a Django backend to store and process contact requests using SQL/NoSQL databases.",
+          fr: "Projet axé sur le développement d'une application permettant d'évaluer des entreprises et des produits. Réalisé en équipe à l'aide de la méthodologie agile Scrum. Réalisation du backend dans express.js, d'une base de données MySql et d'un frontend dans React.js.",
+          en: "Project focused on developing an application for rating companies and products. Carried out as a team using the agile Scrum methodology. Backend developed in express.js with a MySql database and frontend in React.js.",
         },
-        image: "https://via.placeholder.com/400x300",
-        tags: ["React", "Django", "PostgreSQL"],
-        link: "#",
-        github: "https://github.com/JavierVargas0112/nesco-website"
+        image: "projects/Company-Ranker.png",
+        tags: ["React.js", "Express.js", "MySql", "Agile Scrum", "JavaScript", "Node.js", "HTML", "CSS"],
+        link: "https://github.com/GustavoR-ivera/Company-Ranker",
+        github: "https://github.com/GustavoR-ivera/Company-Ranker"
     },
     {
         title: { fr: "Portfolio personnel", en: "Personal portfolio" },
         description: {
-          fr: "Ce site web réactif a été créé pour présenter mon parcours, mes compétences et mes projets professionnels.",
-          en: "This responsive website was built to showcase my background, skills, and professional projects.",
+          fr: "Projet réalisé pour la modernisation des référentiels d'informations de la faculté des sciences économiques de l'université nationale de Colombie. Migration des données vers un site web réalisé principalement avec Angular, un backend en Django et une base de données PostgresSQL et MongoDB. Projet remarquable pour sa mise en œuvre formelle de la sécurité des données, la gestion des bases de données et le suivi des réglementations en matière de protection des données.",
+          en: "Project carried out to modernize the information repositories of the Faculty of Economic Sciences at the National University of Colombia. Data migration to a website built mainly with Angular, a Django backend, and a PostgresSQL and MongoDB database. Project notable for its formal implementation of data security, database administration, and monitoring of data protection regulations.",
         },
-        image: "https://via.placeholder.com/400x300",
-        tags: ["React", "Vite", "Tailwind CSS"],
+        image: "projects/Repositorio-FCE.png",
+        tags: ["Angular", "Django", "PostgreSQL", "MongoDB", "Data Security", "Data Protection"],
         link: "#",
-        github: "https://github.com/JavierVargas0112/portfolio"
+        github: "https://github.com/JavierVargas0112/"
     }
 ];
 
