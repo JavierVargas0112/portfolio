@@ -10,11 +10,11 @@ export const translations = {
     contactButton: { fr: "Contactez-moi", en: "Contact Me" },
   },
   hero: {
-    role: { fr: "Développeur Backend & Étudiant M1 SISC", en: "Backend Developer & M1 SISC Student" },
+    role: { fr: "Développeur Backend & Étudiant M2 SISC", en: "Backend Developer & M1 SISC Student" },
     headline: { fr: "Créer des expériences numériques avec précision.", en: "Crafting digital experiences with precision." },
     summary: {
-      fr: "Étudiant ingénieur en M1 Systèmes Intelligents Sécurisés et Communicants, passionné par le développement backend et l’analyse de données. Je cherche à appliquer des solutions robustes aux défis techniques en tirant profit de mes compétences en Node.js, React, Python et bases de données.",
-      en: "M1 engineering student in Secure and Intelligent Systems, passionate about backend development and data analysis. I'm looking to apply robust solutions to technical challenges using my skills in Node.js, React, Python and databases.",
+      fr: "Étudiant ingénieur en M2 Systèmes Intelligents Sécurisés et Communicants, passionné par le développement backend et l’analyse de données. Je cherche à appliquer des solutions robustes aux défis techniques en tirant profit de mes compétences en Node.js, React, Python et bases de données.",
+      en: "M2 engineering student in Secure and Intelligent Systems, passionate about backend development and data analysis. I'm looking to apply robust solutions to technical challenges using my skills in Node.js, React, Python and databases.",
     },
     ctaContact: { fr: "Contactez-moi", en: "Contact Me" },
     ctaDownload: { fr: "Télécharger CV", en: "Download CV" },
