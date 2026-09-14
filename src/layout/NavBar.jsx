@@ -53,7 +53,14 @@ export const NavBar = () =>{
 
             {/* CTA Button */}
             <div className="hidden md:block">
-                <Button size="sm">{translations.nav.contactButton[lang]}</Button>
+                <Button
+                    size="sm"
+                    onClick={() => {
+                        window.location.href = "mailto:javier.vargas@etu.imt-nord-europe.fr"
+                    }}
+                >
+                    {translations.nav.contactButton[lang]}
+                </Button>
             </div>
         
             {/* mobile menu button */}
