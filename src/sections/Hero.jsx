@@ -6,7 +6,7 @@ import { translations } from "@/translations"
 
 const skills = [
     "React",
-    "Next.js",
+    "Angular",
     "Typescript",
     "Node.js",
     "Express",
@@ -15,10 +15,12 @@ const skills = [
     "PostgreSQL",
     "Docker",
     "AWS",
+    "Azure",
     "Django",
-    "Springboot",
     "Python",
-    "Matlab",
+    "C++",
+    "ROS 2",
+    "Tailwind CSS",
     "Figma",
     "Git",
 
@@ -88,13 +90,15 @@ export const Hero = () => {
                     <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
                         <span className="text-sm text-muted-foreground">{t.follow[lang]} </span>
                         {[
-                        {icon: Github, href: "#"},
-                        {icon: Linkedin, href: "#"},
-                        
+                        {icon: Github, href: "https://github.com/JavierVargas0112"},
+                        {icon: Linkedin, href: "https://linkedin.com/in/javier-santiago-vargas-parra"},
+
                         ].map((social, idx) => (
-                            <a 
+                            <a
                                 key={idx}
-                                href={social.href} 
+                                href={social.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="p-2 rounded-full glass  hover:bg-primary/10 hover:text-primary transition-all duration-300"
                             >
                                 {<social.icon className="w-5 h-5"/>}

@@ -3,23 +3,34 @@ import { translations } from "@/translations";
 
 const experiences = [
     {
+        period: "Mai 2026 – Août 2026",
+        role: { fr: "Assistant-ingénieur — plateforme 5G", en: "Engineering Assistant — 5G Platform" },
+        company: "IMT Nord Europe — CERI Systèmes Numériques",
+        description: {
+          fr: "Déploiement d'un réseau 5G Standalone privé de bout en bout (cœur OpenAirInterface CN5G conteneurisé, station de base nr-softmodem, radio USRP B210). Diagnostic d'une perte de 20 à 65 % des échantillons radio en machine virtuelle, cause isolée au temps réel de l'hyperviseur ; passage en bare metal pour zéro échantillon perdu. Validation par trace du registre 5G-AKA et terminaux commerciaux en n77, 51 Mbit/s applicatifs.",
+          en: "Deployed a private end-to-end 5G Standalone network (containerized OpenAirInterface CN5G core, nr-softmodem base station, USRP B210 radio). Diagnosed a 20-65% radio sample loss in a virtual machine, tracing the cause to hypervisor real-time jitter; moved to bare metal for zero sample loss. Validated via 5G-AKA registration traces and commercial terminals on n77, reaching 51 Mbit/s at the application layer.",
+        },
+        technologies: ["5G Standalone", "OpenAirInterface", "Docker", "Linux", "USRP"],
+        current: false,
+    },
+    {
         period: "Feb 2025 – Jun 2025",
         role: { fr: "Développeur Backend", en: "Backend Developer" },
         company: "IHUBBS Business Solutions",
         description: {
-          fr: "Développement backend de systèmes informatiques pour des écoles en utilisant Node.js et Express.",
-          en: "Backend development of school systems using Node.js and Express.",
+          fr: "Plateforme de suivi scolaire (notes, présences, enseignants) pour 3 écoles et 1 000 élèves, démarrée de zéro et portée seul côté backend dans une équipe de 5. Modèle de données proposé et validé avec le client, avec deux refontes de schéma. Authentification JWT et bcrypt, rôles administrateur et superviseur, import/export CSV et Excel.",
+          en: "Built a school tracking platform (grades, attendance, teachers) for 3 schools and 1,000 students, starting from scratch and owning the backend solo within a team of 5. Proposed and validated the data model with the client, through two schema redesigns. JWT and bcrypt authentication, administrator and supervisor roles, CSV and Excel import/export.",
         },
-        technologies: ["Node.js", "Express", "MongoDB", "SQL"],
+        technologies: ["Node.js", "Express", "MySQL", "JWT", "bcrypt"],
         current: false,
     },
     {
-        period: "Sept 2024 – Déc 2024",
+        period: "Fév 2024 – Déc 2024",
         role: { fr: "Développeur Logiciel", en: "Software Developer" },
-        company: "Nesco inversiones",
+        company: "Nesco Inversiones",
         description: {
-          fr: "Administration de bases de données SQL et NoSQL, développement et déploiement d'un site web d'entreprise avec React.js, et gestion des demandes de contact via Django.",
-          en: "Administered SQL/NoSQL databases, developed and deployed a company website with React.js, and managed contact requests with Django.",
+          fr: "Seul développeur du projet, de la maquette à la mise en production. Maquette, design et développement du site vitrine sous React.js avec formulaire de contact en Django, ainsi qu'une application interne de gestion des tâches utilisée par une quinzaine de collaborateurs.",
+          en: "Sole developer on the project, from mockup to production. Designed and built the showcase website in React.js with a Django contact form, plus an internal task management app used by about fifteen employees.",
         },
         technologies: ["React", "Django", "PostgreSQL", "MongoDB"],
         current: false,

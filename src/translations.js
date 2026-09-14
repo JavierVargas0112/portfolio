@@ -2,6 +2,7 @@ export const translations = {
   nav: {
     links: {
       about: { fr: "À propos", en: "About" },
+      skills: { fr: "Compétences", en: "Skills" },
       projects: { fr: "Projets", en: "Projects" },
       experience: { fr: "Expérience", en: "Experience" },
       contact: { fr: "Contact", en: "Contact" },
@@ -32,13 +33,13 @@ export const translations = {
         "Étudiant ingénieur en M1 Systèmes Intelligents Sécurisés et Communicants à IMT Nord Europe, passionné par le développement backend et l’analyse de données. Mes expériences m'ont amené à concevoir des systèmes pour le secteur éducatif et des plateformes web d'entreprise.",
         "J'ai acquis une solide maîtrise de Node.js, Express, React, Python, Django, ainsi que dans la gestion de bases de données SQL et NoSQL. Curieux et rigoureux, j'aime résoudre des problèmes complexes et automatiser des processus pour gagner en efficacité.",
         "Proactif et axé sur la collaboration, je travaille bien en équipe agile, en utilisant SCRUM et des pratiques modernes de développement. Mon sens du leadership et ma gestion du temps contribuent à la réussite des projets.",
-        "Je suis actuellement à la recherche d'un stage à partir d'avril 2026 afin de mettre mes compétences au service de projets ambitieux et continuer à apprendre de nouvelles technologies.",
+        "Je recherche actuellement un stage de fin d'études de six mois à partir du 12 février 2027 afin de mettre mes compétences au service de projets ambitieux et continuer à apprendre de nouvelles technologies.",
       ],
       en: [
         "Engineering student currently pursuing an M1 in Secure and Intelligent Systems at IMT Nord Europe, passionate about backend development and data analysis. My experiences have led me to design systems for the education sector and enterprise web platforms.",
         "I have developed strong skills in Node.js, Express, React, Python, Django, as well as managing SQL and NoSQL databases. Curious and thorough, I enjoy solving complex problems and automating processes to increase efficiency.",
         "Proactive and team-oriented, I thrive in agile environments using SCRUM and modern development practices. My leadership and time management skills contribute to successful project outcomes.",
-        "I am currently seeking an internship starting in April 2026 to apply my skills to ambitious projects and continue learning new technologies.",
+        "I am currently looking for a six-month final-year internship starting February 12, 2027 to apply my skills to ambitious projects and continue learning new technologies.",
       ],
     },
     mission: {
@@ -117,10 +118,10 @@ export const translations = {
     },
     contactInfoTitle: { fr: "Informations de contact", en: "Contact Information" },
     availability: {
-      title: { fr: "Disponible actuellement", en: "Currently Available" },
+      title: { fr: "Recherche de stage — février 2027", en: "Seeking Internship — February 2027" },
       text: {
-        fr: "Je suis actuellement ouvert à de nouvelles opportunités et projets passionnants. Que vous ayez besoin d'un ingénieur en temps plein ou d'un consultant freelance, parlons-en !",
-        en: "I'm currently open to new opportunities and exciting projects. Whether you need a full-time engineer or a freelance consultant, let's talk!",
+        fr: "Je recherche un stage de fin d'études de six mois à partir du 12 février 2027, avec une mobilité sur toute la France. Ouvert également à d'autres opportunités et collaborations d'ici là, parlons-en !",
+        en: "I'm looking for a six-month final-year internship starting February 12, 2027, open to relocating anywhere in France. Also open to other opportunities and collaborations in the meantime, let's talk!",
       },
     },
     labels: { fr: { email: "Email", phone: "Téléphone", location: "Localisation" }, en: { email: "Email", phone: "Phone", location: "Location" } },

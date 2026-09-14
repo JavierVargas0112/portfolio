@@ -28,7 +28,7 @@ const rawProjects = [
         github: "https://github.com/GustavoR-ivera/Company-Ranker"
     },
     {
-        title: { fr: "Portfolio personnel", en: "Personal portfolio" },
+        title: { fr: "Modernisation des dépôts d'information — UNAL", en: "Information Repository Modernization — UNAL" },
         description: {
           fr: "Projet réalisé pour la modernisation des référentiels d'informations de la faculté des sciences économiques de l'université nationale de Colombie. Migration des données vers un site web réalisé principalement avec Angular, un backend en Django et une base de données PostgresSQL et MongoDB. Projet remarquable pour sa mise en œuvre formelle de la sécurité des données, la gestion des bases de données et le suivi des réglementations en matière de protection des données.",
           en: "Project carried out to modernize the information repositories of the Faculty of Economic Sciences at the National University of Colombia. Data migration to a website built mainly with Angular, a Django backend, and a PostgresSQL and MongoDB database. Project notable for its formal implementation of data security, database administration, and monitoring of data protection regulations.",
