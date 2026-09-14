@@ -1,5 +1,5 @@
 import { Github, ArrowUpRight } from "lucide-react";
-import {AnimatedBorderButton} from "@/components/AnimatedBorderButton";
+import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations";
 
@@ -14,7 +14,7 @@ const rawProjects = [
         image: "projects/Certificate-Analisis.png",
         tags: ["Python", "Tkinter", "OpenSSL", "Multi-threading", "Network Sockets"],
         link: "https://github.com/JavierVargas0112/x509-certificate-analisis",
-        github: "https://github.com/JavierVargas0112/x509-certificate-analisis" 
+        github: "https://github.com/JavierVargas0112/x509-certificate-analisis"
     },
     {
         title: { fr: "Company Ranker", en: "Company Ranker" },
@@ -37,7 +37,95 @@ const rawProjects = [
         tags: ["Angular", "Django", "PostgreSQL", "MongoDB", "Data Security", "Data Protection"],
         link: "#",
         github: "https://github.com/JavierVargas0112/"
-    }
+    },
+    {
+        title: { fr: "Navigation autonome par waypoints GPS", en: "Autonomous GPS Waypoint Navigation" },
+        description: {
+          fr: "Nœuds ROS 2 pilotant un drone de surface WAM-V : conversion GPS→ENU et contrôleur de cap sur les propulseurs.",
+          en: "ROS 2 nodes piloting a WAM-V surface drone: GPS→ENU conversion and a heading controller for the thrusters.",
+        },
+        image: null,
+        tags: ["ROS 2", "Gazebo", "Python"],
+        link: null,
+        github: "https://github.com/JavierVargas0112/vrx_ws-Path-planner",
+    },
+    {
+        title: { fr: "Couverture complète de zone en ROS 2", en: "Full Area Coverage in ROS 2" },
+        description: {
+          fr: "Paquet de coverage path planning : waypoints en boustrophédon calculés sur la grille d'occupation, asservissement en cap et publication de l'avancement.",
+          en: "Coverage path planning package: boustrophedon waypoints computed on the occupancy grid, heading control and progress publishing.",
+        },
+        image: null,
+        tags: ["ROS 2", "Python", "Gazebo"],
+        link: null,
+        github: null,
+    },
+    {
+        title: { fr: "Solveur automatique de Diamond Rush", en: "Diamond Rush Auto-Solver" },
+        description: {
+          fr: "Lecture du plateau à l'écran, reconstruction de la grille, recherche BFS sur les états (rochers, clés, portes), puis rejeu de la solution dans le navigateur.",
+          en: "Reads the on-screen board, rebuilds the grid, runs a BFS search over states (rocks, keys, doors), then replays the solution in the browser.",
+        },
+        image: null,
+        tags: ["Python", "OpenCV", "Tesseract OCR", "Selenium"],
+        link: null,
+        github: null,
+    },
+    {
+        title: { fr: "Agent Othello", en: "Othello Agent" },
+        description: {
+          fr: "Agent de jeu dont la profondeur de recherche s'adapte au temps restant. Évaluation par poids de position, mobilité, coins et stabilité des pions.",
+          en: "Game agent whose search depth adapts to remaining time. Evaluation by position weights, mobility, corners and piece stability.",
+        },
+        image: null,
+        tags: ["JavaScript", "Minimax", "Alpha-Beta Pruning"],
+        link: null,
+        github: "https://github.com/JavierVargas0112/Otello",
+    },
+    {
+        title: { fr: "Pierre-papier-ciseaux par reconnaissance de gestes", en: "Rock-Paper-Scissors via Gesture Recognition" },
+        description: {
+          fr: "Détection de la main et comptage des doigts image par image, arbitrage de la partie et interface temps réel. Projet d'équipe suivi en backlog.",
+          en: "Frame-by-frame hand detection and finger counting, game arbitration and a real-time interface. Team project tracked in a backlog.",
+        },
+        image: null,
+        tags: ["Python", "OpenCV", "MediaPipe"],
+        link: null,
+        github: "https://github.com/JavierVargas0112/Proyecto-Comp-Visual-Grupo-11",
+    },
+    {
+        title: { fr: "Module noyau Linux", en: "Linux Kernel Module" },
+        description: {
+          fr: "Module agissant sur la table des processus : résolution d'un PID passé en paramètre et envoi de signal depuis l'espace noyau.",
+          en: "Module operating on the process table: resolving a PID passed as a parameter and sending a signal from kernel space.",
+        },
+        image: null,
+        tags: ["C", "Kernel API", "Loadable Modules"],
+        link: null,
+        github: null,
+    },
+    {
+        title: { fr: "ACP et classification non supervisée", en: "PCA & Unsupervised Clustering" },
+        description: {
+          fr: "Réduction de dimension par ACP, k-moyennes et classification hiérarchique ; choix du nombre de groupes au score de silhouette.",
+          en: "Dimensionality reduction with PCA, k-means and hierarchical clustering; cluster count chosen via silhouette score.",
+        },
+        image: null,
+        tags: ["Python", "scikit-learn", "pandas", "SciPy"],
+        link: null,
+        github: "https://github.com/JavierVargas0112/Non-supervised-Learning",
+    },
+    {
+        title: { fr: "Transformations géométriques 3D", en: "3D Geometric Transformations" },
+        description: {
+          fr: "Les mêmes transformations — translation, rotation, échelle — implémentées dans trois environnements pour en comparer les conventions.",
+          en: "The same transformations — translation, rotation, scale — implemented across three environments to compare their conventions.",
+        },
+        image: null,
+        tags: ["Three.js", "React", "Processing", "Python"],
+        link: null,
+        github: "https://github.com/JavierVargas0112/ProgramacionVisual",
+    },
 ];
 
 export const Projects = () => {
@@ -68,68 +156,87 @@ export const Projects = () => {
             </p>
 
             {/* Projects Grid */}
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
                 {projects.map((project, idx) => (
-                    <div 
-                        key={idx} 
-                        className="group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1" 
-                        style={{animationDelay: `${(idx + 1) * 100}ms`}}
+                    <div
+                        key={idx}
+                        className="group glass rounded-2xl overflow-hidden animate-fade-in flex flex-col"
+                        style={{animationDelay: `${(idx + 1) * 80}ms`}}
                     >
-                        <div className="relative overflow-hidden aspect-video">
-                            <img 
-                                src={project.image} 
-                                alt={project.title} 
-                                className="w-full h-full object-cover transition-transform duration-700 hover:scale-110 "
-                            />
-                        </div>
-                        <div className=" absolute inset-0
-                        bg-gradient-to-t from-card via-card/50
-                        to transparent opacity-60"
-                        />
+                        {project.image && (
+                            <div className="relative overflow-hidden aspect-video">
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-110 "
+                                />
+                                <div className=" absolute inset-0
+                                bg-gradient-to-t from-card via-card/50
+                                to transparent opacity-60"
+                                />
 
-                        {/* Overlay Links */}
-                        <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <a 
-                                href={project.link} 
-                                className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
-                            >
-                                <ArrowUpRight className="w-5 h-5" />
-                            </a>
-                            <a
-                                href={project.github} 
-                                className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
-                            >
-                                <Github className="w-5 h-5" />
-                            </a>
-                        </div>
-
+                                {/* Overlay Links */}
+                                <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    {project.link && (
+                                        <a
+                                            href={project.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                                        >
+                                            <ArrowUpRight className="w-5 h-5" />
+                                        </a>
+                                    )}
+                                    {project.github && (
+                                        <a
+                                            href={project.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                                        >
+                                            <Github className="w-5 h-5" />
+                                        </a>
+                                    )}
+                                </div>
+                            </div>
+                        )}
 
                         {/* Content */}
-                        <div className="p-6 space-y-4">
-                            <div className="flex items-start justify-between">
+                        <div className="p-6 space-y-4 flex-1 flex flex-col">
+                            <div className="flex items-start justify-between gap-3">
                                 <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
                                     {project.title}
                                 </h3>
-                                <ArrowUpRight className="w-5 h-5
-                                text-muted-foreground group-hover:text-primary
-                                group-hover:translate-x-1
-                                group-hover:-translate-y-1 transition-all"
-                                />
-                            </div>
-                                <p className="text-muted-foreground text-sm">{project.description}</p>
-                                <div className="flex flex-wrap gap-2">
-                                    {project.tags.map((tag, tagIdx) => (
-                                    <span
-                                        key={tagIdx} 
-                                        className="px-4 py-1.5 rounded-full bg-surface text-xs font-medium border border-border/50 text-muted-foreground hover:border-primary/50 hover:text-primary transition-all duration-300"
+                                {project.image ? (
+                                    <ArrowUpRight className="w-5 h-5
+                                    text-muted-foreground group-hover:text-primary
+                                    group-hover:translate-x-1
+                                    group-hover:-translate-y-1 transition-all flex-shrink-0"
+                                    />
+                                ) : project.github && (
+                                    <a
+                                        href={project.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="p-2 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all flex-shrink-0"
                                     >
-                                        {tag}
-                                        </span>
-                                    ))}
-                                </div>
+                                        <Github className="w-4 h-4" />
+                                    </a>
+                                )}
+                            </div>
+                            <p className="text-muted-foreground text-sm flex-1">{project.description}</p>
+                            <div className="flex flex-wrap gap-2">
+                                {project.tags.map((tag, tagIdx) => (
+                                <span
+                                    key={tagIdx}
+                                    className="px-4 py-1.5 rounded-full bg-surface text-xs font-medium border border-border/50 text-muted-foreground hover:border-primary/50 hover:text-primary transition-all duration-300"
+                                >
+                                    {tag}
+                                    </span>
+                                ))}
                             </div>
                         </div>
-                    
+                    </div>
                 ))}
             </div>
             {/* View All CTA */}
