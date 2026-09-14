@@ -12,8 +12,8 @@ export const Contact = () => {
     const t = translations.contact;
     // ensure labels are safe even if HMR hasn't reloaded translations
     const emailLabel = t.labels?.email?.[lang] ?? "Email";
-    const phoneLabel = t.labels?.phone?.[lang] ?? (lang === "fr" ? "Téléphone" : "Phone");
-    const locationLabel = t.labels?.location?.[lang] ?? (lang === "fr" ? "Localisation" : "Location");
+    const phoneLabel = t.labels?.phone?.[lang] ?? { fr: "Téléphone", en: "Phone", es: "Teléfono" }[lang];
+    const locationLabel = t.labels?.location?.[lang] ?? { fr: "Localisation", en: "Location", es: "Ubicación" }[lang];
 
     const contactInfo = [
       {

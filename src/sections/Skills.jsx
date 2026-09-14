@@ -4,42 +4,42 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const skillCategories = [
     {
         icon: Code2,
-        title: { fr: "Langages", en: "Languages" },
+        title: { fr: "Langages", en: "Languages", es: "Lenguajes" },
         items: ["C", "C++", "Python", "JavaScript", "TypeScript", "SQL", "Bash"],
     },
     {
         icon: Server,
-        title: { fr: "Backend et API", en: "Backend & API" },
+        title: { fr: "Backend et API", en: "Backend & API", es: "Backend y API" },
         items: ["Node.js", "Express", "Django", "API REST", "JWT", "bcrypt", "Microservices"],
     },
     {
         icon: Layout,
-        title: { fr: "Front-end et design", en: "Frontend & Design" },
+        title: { fr: "Front-end et design", en: "Frontend & Design", es: "Frontend y diseño" },
         items: ["React.js", "Angular", "Vite", "Tailwind CSS", "Three.js", "Figma"],
     },
     {
         icon: Database,
-        title: { fr: "Bases de données", en: "Databases" },
+        title: { fr: "Bases de données", en: "Databases", es: "Bases de datos" },
         items: ["MySQL", "PostgreSQL", "MongoDB"],
     },
     {
         icon: Network,
-        title: { fr: "Systèmes et réseaux", en: "Systems & Networks" },
+        title: { fr: "Systèmes et réseaux", en: "Systems & Networks", es: "Sistemas y redes" },
         items: ["Linux", "Docker", "AWS", "Azure", "Wireshark", "Sockets TCP", "Multithreading"],
     },
     {
         icon: Bot,
-        title: { fr: "Robotique et simulation", en: "Robotics & Simulation" },
+        title: { fr: "Robotique et simulation", en: "Robotics & Simulation", es: "Robótica y simulación" },
         items: ["ROS 2", "Gazebo"],
     },
     {
         icon: Eye,
-        title: { fr: "Données, vision et automatisation", en: "Data, Vision & Automation" },
+        title: { fr: "Données, vision et automatisation", en: "Data, Vision & Automation", es: "Datos, visión y automatización" },
         items: ["OpenCV", "MediaPipe", "scikit-learn", "pandas", "NumPy", "Tesseract OCR", "Selenium", "Matlab"],
     },
     {
         icon: FlaskConical,
-        title: { fr: "Tests et méthodes", en: "Testing & Methods" },
+        title: { fr: "Tests et méthodes", en: "Testing & Methods", es: "Pruebas y metodologías" },
         items: ["pytest", "Git", "Scrum", "Jira", "Trello", "Notion"],
     },
 ];
@@ -54,10 +54,10 @@ export const Skills = () => {
         <div className="container mx-auto px-6 relative z-10">
             <div className="text-center mx-auto max-w-3xl mb-16">
                 <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
-                    {lang === "fr" ? "Compétences" : "Skills"}
+                    {{ fr: "Compétences", en: "Skills", es: "Habilidades" }[lang]}
                 </span>
                 <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
-                    {lang === "fr" ? "Ma boîte à outils technique." : "My technical toolbox."}
+                    {{ fr: "Ma boîte à outils technique.", en: "My technical toolbox.", es: "Mi caja de herramientas técnica." }[lang]}
                 </h2>
             </div>
 

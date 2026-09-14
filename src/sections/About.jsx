@@ -37,7 +37,7 @@ export const About = () => {
 
                     <div className="space-y-4 animate-fade-in animation-delay-300">
                         <div>
-                            <h3 className="text-lg font-semibold">{lang === "fr" ? "Langues" : "Languages"}</h3>
+                            <h3 className="text-lg font-semibold">{{ fr: "Langues", en: "Languages", es: "Idiomas" }[lang]}</h3>
                             <ul className="list-disc list-inside text-sm text-muted-foreground">
                                 {languageList.map((langStr, i) => (
                                     <li key={i}>{langStr}</li>
