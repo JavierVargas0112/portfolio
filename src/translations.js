@@ -10,7 +10,7 @@ export const translations = {
     contactButton: { fr: "Contactez-moi", en: "Contact Me" },
   },
   hero: {
-    role: { fr: "Développeur Backend & Étudiant M2 SISC", en: "Backend Developer & M1 SISC Student" },
+    role: { fr: "Développeur Backend & Étudiant M2 SISC", en: "Backend Developer & M2 SISC Student" },
     headline: { fr: "Créer des expériences numériques avec précision.", en: "Crafting digital experiences with precision." },
     summary: {
       fr: "Étudiant ingénieur en M2 Systèmes Intelligents Sécurisés et Communicants, passionné par le développement backend et l’analyse de données. Je cherche à appliquer des solutions robustes aux défis techniques en tirant profit de mes compétences en Node.js, React, Python et bases de données.",
@@ -30,13 +30,13 @@ export const translations = {
     },
     paragraphs: {
       fr: [
-        "Étudiant ingénieur en M1 Systèmes Intelligents Sécurisés et Communicants à IMT Nord Europe, passionné par le développement backend et l’analyse de données. Mes expériences m'ont amené à concevoir des systèmes pour le secteur éducatif et des plateformes web d'entreprise.",
+        "Étudiant ingénieur en M2 Systèmes Intelligents Sécurisés et Communicants à IMT Nord Europe, passionné par le développement backend et l’analyse de données. Mes expériences m'ont amené à concevoir des systèmes pour le secteur éducatif et des plateformes web d'entreprise.",
         "J'ai acquis une solide maîtrise de Node.js, Express, React, Python, Django, ainsi que dans la gestion de bases de données SQL et NoSQL. Curieux et rigoureux, j'aime résoudre des problèmes complexes et automatiser des processus pour gagner en efficacité.",
         "Proactif et axé sur la collaboration, je travaille bien en équipe agile, en utilisant SCRUM et des pratiques modernes de développement. Mon sens du leadership et ma gestion du temps contribuent à la réussite des projets.",
         "Je recherche actuellement un stage de fin d'études de six mois à partir du 12 février 2027 afin de mettre mes compétences au service de projets ambitieux et continuer à apprendre de nouvelles technologies.",
       ],
       en: [
-        "Engineering student currently pursuing an M1 in Secure and Intelligent Systems at IMT Nord Europe, passionate about backend development and data analysis. My experiences have led me to design systems for the education sector and enterprise web platforms.",
+        "Engineering student currently pursuing an M2 in Secure and Intelligent Systems at IMT Nord Europe, passionate about backend development and data analysis. My experiences have led me to design systems for the education sector and enterprise web platforms.",
         "I have developed strong skills in Node.js, Express, React, Python, Django, as well as managing SQL and NoSQL databases. Curious and thorough, I enjoy solving complex problems and automating processes to increase efficiency.",
         "Proactive and team-oriented, I thrive in agile environments using SCRUM and modern development practices. My leadership and time management skills contribute to successful project outcomes.",
         "I am currently looking for a six-month final-year internship starting February 12, 2027 to apply my skills to ambitious projects and continue learning new technologies.",

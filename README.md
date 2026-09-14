@@ -5,7 +5,7 @@ Site Web personnel développé avec React et Vite pour présenter mon profil de 
 ## A propos
 
 - Nom : Javier Santiago Vargas Parra
-- Titre : Développeur backend / Étudiant M1 SISC
+- Titre : Développeur backend / Étudiant M2 SISC
 - Email : javier.vargas@etu.imt-nord-europe.fr
 - Téléphone : +33 7 59 50 39 40
 - Localisation : Lille, France
