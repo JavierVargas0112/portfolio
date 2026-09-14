@@ -1,8 +1,11 @@
 import {Hero} from "@/sections/Hero"
 import { NavBar } from "@/layout/NavBar"
 import {About} from "@/sections/About"
-import {Projects} from "@/sections/Projects"
+import {Skills} from "@/sections/Skills"
 import {Experience} from "@/sections/Experience"
+import {Projects} from "@/sections/Projects"
+import {OtherProjects} from "@/sections/OtherProjects"
+import {Certifications} from "@/sections/Certifications"
 import {Testimonials} from "@/sections/Testimonials"
 import {Contact} from "@/sections/Contact"
 
@@ -18,8 +21,11 @@ function App() {
         <main>
           <Hero />
           <About />
-          <Projects />
+          <Skills />
           <Experience />
+          <Projects />
+          <OtherProjects />
+          <Certifications />
           <Testimonials />
           <Contact />
         </main>

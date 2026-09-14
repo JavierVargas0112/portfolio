@@ -14,8 +14,9 @@ export const NavBar = () =>{
     // derive navLinks based on language
     const navLinks = [
       { href: "#about", label: translations.nav.links.about[lang] },
-      { href: "#projects", label: translations.nav.links.projects[lang] },
+      { href: "#skills", label: translations.nav.links.skills[lang] },
       { href: "#experience", label: translations.nav.links.experience[lang] },
+      { href: "#projects", label: translations.nav.links.projects[lang] },
       { href: "#contact", label: translations.nav.links.contact[lang] },
     ]
 
