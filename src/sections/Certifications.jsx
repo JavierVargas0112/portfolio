@@ -3,13 +3,14 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const certifications = [
     {
-        title: { fr: "Spécialisation en science des données", en: "Data Science Specialization" },
+        title: { fr: "Spécialisation en science des données", en: "Data Science Specialization", es: "Especialización en ciencia de datos" },
         institution: "Universidad de los Andes",
     },
     {
         title: {
           fr: "Programmation, approfondissement applications Web (800 h)",
           en: "Programming, Advanced Web Applications (800 h)",
+          es: "Programación, profundización en aplicaciones web (800 h)",
         },
         institution: "Universidad Sergio Arboleda",
     },
@@ -23,10 +24,10 @@ export const Certifications = () => {
         <div className="container mx-auto px-6 relative z-10">
             <div className="text-center mx-auto max-w-3xl mb-16">
                 <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
-                    {lang === "fr" ? "Certifications" : "Certifications"}
+                    {{ fr: "Certifications", en: "Certifications", es: "Certificaciones" }[lang]}
                 </span>
                 <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
-                    {lang === "fr" ? "Formation continue." : "Continuous learning."}
+                    {{ fr: "Formation continue.", en: "Continuous learning.", es: "Formación continua." }[lang]}
                 </h2>
             </div>
 
