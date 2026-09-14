@@ -48,7 +48,7 @@ export const NavBar = () =>{
                   onClick={toggleLanguage}
                   className="px-3 py-1 border rounded-full text-sm"
                 >
-                  {lang === "fr" ? "EN" : "FR"}
+                  {lang.toUpperCase()}
                 </button>
             </div>
 
@@ -99,7 +99,7 @@ export const NavBar = () =>{
                       }}
                       className="px-3 py-1 border rounded-full text-sm"
                     >
-                      {lang === "fr" ? "EN" : "FR"}
+                      {lang.toUpperCase()}
                     </button>
                 </div>
                 

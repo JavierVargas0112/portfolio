@@ -9,7 +9,7 @@ export const Testimonials = () => {
         <div className="container mx-auto px-6">
             <div className="max-w-3xl mx-auto text-center space-y-8">
                 <h2 className="text-3xl font-bold text-secondary-foreground">
-                    {lang === "fr" ? "Ce que les gens disent" : "What people say"}
+                    {{ fr: "Ce que les gens disent", en: "What people say", es: "Lo que dice la gente" }[lang]}
                 </h2>
                 <blockquote className="text-lg italic text-muted-foreground">
                     "{t.quote[lang]}"

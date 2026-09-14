@@ -3,56 +3,61 @@ import { translations } from "@/translations";
 
 const experiences = [
     {
-        period: "Mai 2026 – Août 2026",
-        role: { fr: "Assistant-ingénieur — plateforme 5G", en: "Engineering Assistant — 5G Platform" },
+        period: { fr: "Mai 2026 – Août 2026", en: "May 2026 – Aug 2026", es: "Mayo 2026 – Agosto 2026" },
+        role: { fr: "Assistant-ingénieur — plateforme 5G", en: "Engineering Assistant — 5G Platform", es: "Ingeniero asistente — plataforma 5G" },
         company: "IMT Nord Europe — CERI Systèmes Numériques",
         description: {
           fr: "Déploiement d'un réseau 5G Standalone privé de bout en bout (cœur OpenAirInterface CN5G conteneurisé, station de base nr-softmodem, radio USRP B210). Diagnostic d'une perte de 20 à 65 % des échantillons radio en machine virtuelle, cause isolée au temps réel de l'hyperviseur ; passage en bare metal pour zéro échantillon perdu. Validation par trace du registre 5G-AKA et terminaux commerciaux en n77, 51 Mbit/s applicatifs.",
           en: "Deployed a private end-to-end 5G Standalone network (containerized OpenAirInterface CN5G core, nr-softmodem base station, USRP B210 radio). Diagnosed a 20-65% radio sample loss in a virtual machine, tracing the cause to hypervisor real-time jitter; moved to bare metal for zero sample loss. Validated via 5G-AKA registration traces and commercial terminals on n77, reaching 51 Mbit/s at the application layer.",
+          es: "Despliegue de una red 5G Standalone privada de extremo a extremo (núcleo OpenAirInterface CN5G en contenedores, estación base nr-softmodem, radio USRP B210). Diagnóstico de una pérdida del 20 al 65 % de las muestras de radio en máquina virtual, causa aislada en la latencia en tiempo real del hipervisor; migración a bare metal para lograr cero pérdida de muestras. Validación mediante trazas del registro 5G-AKA y terminales comerciales en n77, con 51 Mbit/s a nivel de aplicación.",
         },
         technologies: ["5G Standalone", "OpenAirInterface", "Docker", "Linux", "USRP"],
         current: false,
     },
     {
-        period: "Feb 2025 – Jun 2025",
-        role: { fr: "Développeur Backend", en: "Backend Developer" },
+        period: { fr: "Fév 2025 – Juin 2025", en: "Feb 2025 – Jun 2025", es: "Feb 2025 – Jun 2025" },
+        role: { fr: "Développeur Backend", en: "Backend Developer", es: "Desarrollador Backend" },
         company: "IHUBBS Business Solutions",
         description: {
           fr: "Plateforme de suivi scolaire (notes, présences, enseignants) pour 3 écoles et 1 000 élèves, démarrée de zéro et portée seul côté backend dans une équipe de 5. Modèle de données proposé et validé avec le client, avec deux refontes de schéma. Authentification JWT et bcrypt, rôles administrateur et superviseur, import/export CSV et Excel.",
           en: "Built a school tracking platform (grades, attendance, teachers) for 3 schools and 1,000 students, starting from scratch and owning the backend solo within a team of 5. Proposed and validated the data model with the client, through two schema redesigns. JWT and bcrypt authentication, administrator and supervisor roles, CSV and Excel import/export.",
+          es: "Plataforma de seguimiento escolar (notas, asistencia, profesores) para 3 colegios y 1000 estudiantes, iniciada desde cero y desarrollada en solitario en el backend dentro de un equipo de 5. Modelo de datos propuesto y validado con el cliente, con dos rediseños de esquema. Autenticación JWT y bcrypt, roles de administrador y supervisor, importación/exportación CSV y Excel.",
         },
         technologies: ["Node.js", "Express", "MySQL", "JWT", "bcrypt"],
         current: false,
     },
     {
-        period: "Fév 2024 – Déc 2024",
-        role: { fr: "Développeur Logiciel", en: "Software Developer" },
+        period: { fr: "Fév 2024 – Déc 2024", en: "Feb 2024 – Dec 2024", es: "Feb 2024 – Dic 2024" },
+        role: { fr: "Développeur Logiciel", en: "Software Developer", es: "Desarrollador de Software" },
         company: "Nesco Inversiones",
         description: {
           fr: "Seul développeur du projet, de la maquette à la mise en production. Maquette, design et développement du site vitrine sous React.js avec formulaire de contact en Django, ainsi qu'une application interne de gestion des tâches utilisée par une quinzaine de collaborateurs.",
           en: "Sole developer on the project, from mockup to production. Designed and built the showcase website in React.js with a Django contact form, plus an internal task management app used by about fifteen employees.",
+          es: "Único desarrollador del proyecto, desde el diseño hasta la puesta en producción. Diseño y desarrollo del sitio web corporativo con React.js y un formulario de contacto en Django, además de una aplicación interna de gestión de tareas utilizada por una quincena de colaboradores.",
         },
         technologies: ["React", "Django", "PostgreSQL", "MongoDB"],
         current: false,
     },
     {
-        period: "Sept 2025 – Présent",
-        role: { fr: "Étudiant en Master", en: "Master Student" },
+        period: { fr: "Sept 2025 – Présent", en: "Sept 2025 – Present", es: "Sept 2025 – Presente" },
+        role: { fr: "Étudiant en Master", en: "Master Student", es: "Estudiante de Máster" },
         company: "IMT Nord Europe",
         description: {
           fr: "Master Systèmes Intelligents Sécurisés et Communicants (double diplôme avec l'Universidad Nacional de Colombia).",
           en: "Master in Secure and Intelligent Systems (double degree with Universidad Nacional de Colombia).",
+          es: "Máster en Sistemas Inteligentes Seguros y Comunicantes (doble titulación con la Universidad Nacional de Colombia).",
         },
         technologies: ["Python", "C++", "SCRUM"],
         current: true,
     },
     {
-        period: "Jan 2021 – Présent",
-        role: { fr: "Étudiant en Ingénierie des systèmes et informatique", en: "Systems and Computer Engineering Student" },
+        period: { fr: "Jan 2021 – Présent", en: "Jan 2021 – Present", es: "Ene 2021 – Presente" },
+        role: { fr: "Étudiant en Ingénierie des systèmes et informatique", en: "Systems and Computer Engineering Student", es: "Estudiante de Ingeniería de Sistemas e Informática" },
         company: "Universidad Nacional de Colombia",
         description: {
           fr: "Cours en ingénierie des systèmes et informatique avec projets en programmation et bases de données.",
           en: "Courses in systems and computer engineering with programming and database projects.",
+          es: "Cursos de ingeniería de sistemas e informática con proyectos de programación y bases de datos.",
         },
         technologies: ["Java", "C++", "Matlab"],
         current: false,
@@ -65,6 +70,7 @@ export const Experience = () => {
     const t = translations.experience;
     const displayExperiences = experiences.map((exp) => ({
       ...exp,
+      period: typeof exp.period === "object" ? exp.period[lang] : exp.period,
       role: typeof exp.role === "object" ? exp.role[lang] : exp.role,
       description: typeof exp.description === "object" ? exp.description[lang] : exp.description,
     }));
@@ -85,7 +91,7 @@ export const Experience = () => {
                 className="text-secondary-foreground text-sm 
                 font-medium tracking-wider uppercase animate-fade-in"
                 >
-                    Parcours professionnel
+                    {t.header[lang]}
                 </span>
                 <h2
                   className="text-4xl md:text-5xl font-bold 
